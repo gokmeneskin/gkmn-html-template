@@ -1,0 +1,154 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+    color: #323232;
+    margin: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        ". nav nav ."
+        ". header header ."
+        ". aside main ."
+        ". . main ."
+        ". footer fouter .";
+}
+nav {
+    grid-area: nav;
+    margin: 0;
+    border-bottom: 2px solid #eee;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+    border-radius: 5px;
+}
+
+header {
+    grid-area: header;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+.footer {
+    position:absolute;
+    bottom:0;
+}
+a, a:link, a:hover, a:visited {
+    text-decoration: none;
+}
+.menu-item {
+    align-self: center;
+    justify-self: center;
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+.nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+    padding: 0;
+}
+
+article {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+}
+/*Login Kuralları*/
+.login-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: calc(100vh - 17px);
+    color: #606060;
+}
+.form {
+    align-self: center;
+    justify-self: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+}
+.login-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(35px, auto);
+    grid-gap: 10px;
+    font-size: 1.2em;
+}
+label {
+    align-self: center;
+}
+.form-input {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #eee;
+}
+.btn-group {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.btn {
+    color: #606060;
+    height: 35px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.btn-submit {
+    grid-column: 3/4;
+}
+.btn-submit:hover{
+    background: #2196F3;
+    color: #fff;
+}
+.btn-full-size {
+    grid-column: 1/4;
+}
+.btn-blue {
+    background: #2196F3;
+    color: #fff;
+}
+.btn-google {
+    background: #d34836;
+    color: #fff;
+}
+.btn-facebook {
+    background: #3b5998;
+    color: #fff;
+}
+.btn-twitter {
+    background: #1da1f2;
+    color: #fff;
+}
+.btn-github {
+    background: #333;
+    color: #fff;
+}
+hr {
+    border-top: 1px solid #eee;
+}
